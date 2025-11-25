@@ -26,6 +26,7 @@ insert(index, elements){
         if(index <0 || index > this.length){
         console.log("Invalid Index");
         return;
+        
 
          //Shifting Condition
          for(let i=this.length; i>index; i--){
@@ -37,7 +38,7 @@ insert(index, elements){
         this.length++;
         }
 
-        delete(index);{
+        delete(index){
 
         //Collecting Statement || Must be false
         if(index <0 || index > this.length){
@@ -68,6 +69,7 @@ insert(index, elements){
         }
 
     search(elements){
+
         //must be true
         for(let i=0; i<this.length; i++){
             if(this.data[i] === elements){
@@ -76,9 +78,9 @@ insert(index, elements){
                 return
             }
     }
-    //False
-    console.log(elements + " is not found at any index");
-    return -1;
+            //False
+            console.log(elements + " is not found at any index");
+             return -1;
 
 
     }
