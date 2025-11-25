@@ -66,8 +66,27 @@ insert(index, elements){
         //After Condition
         this.data[index] = elements;
         }
+
+    search(elements){
+        //must be true
+        for(let i=0; i<this.length; i++){
+            if(this.data[i] === elements){
+                return i;
+                console.log(Element + " found at index " + i);
+                return
+            }
     }
+    //False
+    console.log(elements + " is not found at any index");
+    return -1;
+
+
+    }
+
 }
+
+}
+
 //
 
 arr1 = new Array([4,2,3]);
@@ -81,3 +100,6 @@ arr1.traverse();
 
 arr1.update(2,5);
 arr1.traverse();
+
+arr1.search(43);
+arr1.search(9);
