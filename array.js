@@ -37,7 +37,7 @@ insert(index, elements){
         this.length++;
         }
 
-        delete(Index){
+        delete(index);{
 
         //Collecting Statement || Must be false
         if(index <0 || index > this.length){
@@ -55,9 +55,19 @@ insert(index, elements){
         delete this.data[this.length-1];
         this.length--;
         }    
+
+     update(index, elements){
+        //Collecting Statement || Must be false
+        if(index <0 || index > this.length){
+        console.log("Invalid Index");
+        return;
+        }
+
+        //After Condition
+        this.data[index] = elements;
+        }
     }
 }
-
 //
 
 arr1 = new Array([4,2,3]);
@@ -65,5 +75,9 @@ arr1 = new Array([4,2,3]);
 arr1.traverse();
 arr1.insert(0,9);
 arr1.traverse();
+
 arr1.delete(5);
+arr1.traverse();
+
+arr1.update(2,5);
 arr1.traverse();
