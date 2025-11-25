@@ -30,19 +30,27 @@ class Stack{
         if(this.is_empty()) return null;
         return this.data[this.topIndex];
         }
+    
+    pop(){
+        //Collecting Statement
+        if(this.is_empty()) return null;
 
+        let value = this.data[this.topIndex];
+        delete this.data[this.topIndex];
+        this.topIndex--;
+        return value;
+    }
 }
 //
 
 stack1 = new Stack();
 
-console.log(stack1.is_empty());
 stack1.push(4);
 stack1.push(2);
 stack1.push(3);
 stack1.push(5);
 stack1.push(8);
-console.log(stack1.is_empty());
-console.log(stack1.size());
+console.log("The current size is " + stack1.size());
 console.log("Top Element is: " + stack1.peek());
-
+console.log("Top Element " + stack1.pop() + " is popped, the new top elerment is: " + stack1.peek());
+console.log("The new stack size is " + stack1.size());
